@@ -23,7 +23,7 @@
     <div class='item-container-header'>Classes</div>
     <div class='item-container-content'>
       <label class="item">
-      Date (Year, Month (-1), Day)  
+      Date (Year, Month (-1), Day)
       <input type="dateEnter" class="item-date" name="date-1" value="2016-0-1">
     </label>
     </div>
@@ -41,11 +41,13 @@
   <script src='js/slate.min.js'></script>
   <script>
 	function getData() {
+	var dates = {
+  date: null
+}
+	dates.date = $('#dateEnter').val();
 	
-	date = $('#dateEnter').val();
-	
-	console.log(JSON.stringify(date));
-	return date;
+	console.log(JSON.stringify(dates));
+	return dates;
 }
 	$('#submitButton').on("click", function() {
 	getData();
