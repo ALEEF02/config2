@@ -24,7 +24,7 @@
     <div class='item-container-content'>
       <label class="item">
       Date (Year, Month (-1), Day)
-      <input type="dateEnter" class="item-date" name="date-1" value="2016-0-1">
+      <input type="date" class="item-date" name="date-1" value="2016-0-1">
     </label>
     </div>
     <div class='item-container-footer'>
@@ -44,7 +44,7 @@
 	var dates = {
   date: null
 }
-	dates.date = $('#dateEnter').val();
+	dates.date = $('#date1').val();
 	
 	console.log(JSON.stringify(dates));
 	return dates;
