@@ -41,7 +41,10 @@
   <script src='js/slate.min.js'></script>
   <script>
 	function getData() {
-	var date = $('#date1').val();
+	var dateEntered = {
+  date: null
+}
+	dateEntered.date = $('#date1').val();
 	
 	console.log(JSON.stringify(date));
 	return date;
