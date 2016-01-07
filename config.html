@@ -41,13 +41,11 @@
   <script src='js/slate.min.js'></script>
   <script>
 	function getData() {
-	var dates = {
-  date: null
-}
-	dates.date = $('#dateEnter').val();
 	
-	console.log(JSON.stringify(dates));
-	return dates;
+	date = $('#dateEnter').val();
+	
+	console.log(JSON.stringify(date));
+	return date;
 }
 	$('#submitButton').on("click", function() {
 	getData();
