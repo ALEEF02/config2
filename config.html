@@ -20,12 +20,32 @@
   </div>
 
   <div class='item-container'>
-    <div class='item-container-header'>Classes</div>
+    <div class='item-container-header'>Settings</div>
     <div class='item-container-content'>
       <label class="item">
-      Date (YYYY, MM, DD)
-      <input id="date-1" type='text' class='item-input' name="date-1" placeholder="2016, 1, 1">
-    </label>
+      Name of Event
+      <input id="name-1" type='text' class='item-input' name="name-1" placeholder="New Years">
+    </label><br>
+      <label class="item">
+      Year
+      <input id="year-1" type='text' class='item-input' name="year-1" placeholder="2017">
+    </label><br>
+      <label class='item'>
+        Month
+        <input id='month-1' type='text' class='item-input' name="month-1" placeholder='7 (July)'>
+     </label><br>
+      <label class='item'>
+        Day
+        <input id='day-1' type='text' class='item-input' name="day-1" placeholder='11'>
+     </label><br>
+      <label class='item'>
+        Hour
+        <input id='hour-1' type='text' class='item-input' name="hour-1" placeholder='0 (Midnight) or 15 (3 PM)'>
+     </label><br>
+      <label class='item'>
+        Minute
+        <input id='minute-1' type='text' class='item-input' name="minute-1" placeholder='53'>
+     </label>
     </div>
     <div class='item-container-footer'>
       These settings only change on the watch after you click submit.
@@ -42,9 +62,19 @@
   <script>
 	function getData() {
 	var dateEntered = {
-  date: null
+  Year: null,
+  Month: null, 
+  Day: null,
+  Hour: null,
+  Minute: null,
+  Name: null
 }
-	dateEntered.date = $('#date-1').val();
+	dateEntered.Year = $('#year-1').val();
+	dateEntered.Month = $('#month-1').val();
+	dateEntered.Day = $('#day-1').val();
+	dateEntered.Hour = $('#hour-1').val();
+	dateEntered.Minute = $('#minute-1').val();
+	dateEntered.Name = $('#name-1').val();
 	
 	console.log(JSON.stringify(dateEntered));
 	return dateEntered;
